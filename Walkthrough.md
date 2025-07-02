@@ -68,7 +68,7 @@ Autopsy steps:
 
 In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
 
-![flag1](snippets/flag1)
+![flag1](snippets/flag1.png)
 <pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
 
 ---
@@ -82,11 +82,11 @@ In Autopsy, inspecting the metadata/text embedded in the image showed a hidden f
   - A PGP private key
   - A PGP-encrypted message
 
+![clue](snippets/clue.png)
+
 Used an online PGP decryption tool, the decrypted message said:
 > In case the forensic investigator forgets his password, this hint can help him, where the password is of 6 characters long.
 > Starting 3 characters is the word "for" and the ending 3 characters are numeric.
-
-![clue](snippets/clue.png)
 
 ---
 
@@ -97,9 +97,10 @@ Generated a targeted wordlist using `crunch`:
 Brute-forced with fcrackzip:
 <pre>fcrackzip -u -D -p dict.txt flag.zip</pre>
 - Successfully cracked the password: `for007`.
-- Extracted the zip file and found a PDF. Opened it to get Flag 2.
 
 ![passwd_crack]()
+
+- Extracted the zip file and found a PDF. Opened it to get Flag 2.
 
 ![flag2](snippets/flag2.png)
 <pre>Flag 2: {4a3232c59ecda21ac71bebe3b329bf36}</pre>
@@ -109,10 +110,11 @@ Brute-forced with fcrackzip:
 ## STEP 6: FINDING FLAG 3
 - Explored deeper into the filesystem, found under Docker overlay:
 <pre>/var/lib/docker/overlay2/6f9fd3407d0ee6fe67cef2aa53951b66a6e3384e3b10afa791d1f02836da89c2/diff/var/ftp/pub/saboot.001</pre>
-- Extracted `saboot.001` from Autopsy.
-- Added it as a new data source in Autopsy. There, found `flag3.txt` which contained Flag 3.
 
 ![finding_saboot](snippets/finding_saboot.png)
+
+- Extracted `saboot.001` from Autopsy.
+- Added it as a new data source in Autopsy. There, found `flag3.txt` which contained Flag 3.
 
 ![flag3](snippets/flag3.png)
 <pre>Flag 3: {8442460f48338fe60a9497b8e0e9022f}</pre>
@@ -123,7 +125,7 @@ Brute-forced with fcrackzip:
 - Finally, in the root directory `/` found a file named `root.txt`.
 - Opened it to reveal Flag 4.
 
-![flag4](snippets/flag.png)
+![flag4](snippets/flag4.png)
 <pre>Flag 4: {9440aee508b6215995219c58c8ba4b45}</pre>
 
 ---
