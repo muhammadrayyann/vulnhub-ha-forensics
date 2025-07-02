@@ -32,7 +32,7 @@ This is a forensic analysis lab from VulnHub named HA Forensics, where the prima
 | **Autopsy**              | To analyze the Linux file system in the VM disk  |
 | **crunch**               | To generate a wordlist for brute-forcing the ZIP |
 | **fcrackzip**            | To brute-force the password-protected ZIP file   |
-| **PGP decryption tools** | To decrypt clue message (online used)            |
+| **PGP decryption tools** | To decrypt the clue message (online used)        |
 | **Kali Linux terminal**  | For password cracking and analysis               |
 
 ---
@@ -45,16 +45,19 @@ FTK Imager was used to load and extract the contents of the OVA file:
   - A `.vmdk` file (virtual disk)
   - A `.ovf` descriptor
   - A `.mf` manifest file
+
 ![ftk_imager]()
 
 ---
 
 ## STEP 2: ANALYZING THE DISK WITH AUTOPSY
 - Loaded the `.vmdk` into Autopsy for the filesystem analysis.
+
 Autopsy steps:
 - `Create New Case`
 - Add data source → choose the `.vmdk` disk.
 - Let Autopsy parse the filesystem.
+
 ![autopsy]()
 
 ---
@@ -62,7 +65,8 @@ Autopsy steps:
 ## STEP 3: FINDING FLAG 1
 - Navigated to `/var/www/html/images` directory inside Autopsy.
 - Found an interesting file: `fingerprint.jpg`.
-In Autopsy, inspecting the metadata / text embedded in the image showed a hidden flag under the text section.
+
+In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
 ![flag1]()
 <pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
 
@@ -75,10 +79,12 @@ In Autopsy, inspecting the metadata / text embedded in the image showed a hidden
 - Navigated to `/var/www/html/igolder`, found a file named `clue.txt`.
 - `clue.txt` contained:
   - A PGP private key
-  - A PGP encrypted message
+  - A PGP-encrypted message
+
 Used an online PGP decryption tool, the decrypted message said:
 > In case the forensic investigator forgets his password, this hint can help him, where the password is of 6 characters long.
 > Starting 3 characters is the word "for" and the ending 3 characters are numeric.
+
 ![clue]()
 
 ---
