@@ -141,4 +141,4 @@ Summary of the flags found:
 
 ---
 
-> This completes the forensics analysis on HA Forensics from VulnHub.
+This completes the forensics analysis on HA Forensics from VulnHub.
