@@ -69,7 +69,7 @@ Autopsy steps:
 In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
 
 ![flag1]()
-<pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
+<pre><b>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</b></pre>
 
 ---
 
