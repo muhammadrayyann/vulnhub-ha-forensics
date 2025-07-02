@@ -17,7 +17,7 @@
 ---
 
 ## OVERVIEW
-This is a forensic analysis lab from VulnHub named HA Forensics, where the primary goal is to:
+This is a forensic analysis lab from VulnHub named HA: Forensics, where the goal is to:
 
 - Extract data from a given OVA file
 - Investigate its contents using forensics tools
