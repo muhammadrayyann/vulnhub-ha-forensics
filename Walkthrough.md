@@ -95,7 +95,7 @@ Used an online PGP decryption tool, the decrypted message said:
 Generated a targeted wordlist using `crunch`:
 <pre>crunch 6 6 -t for%%% -o dict.txt</pre>
 
-![passwd_crack](snippets/passwd_crack)
+![passwd_crack](snippets/passwd_crack.png)
 
 Brute-forced with fcrackzip:
 <pre>fcrackzip -u -D -p dict.txt flag.zip</pre>
