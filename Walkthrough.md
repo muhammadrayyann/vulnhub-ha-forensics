@@ -67,6 +67,7 @@ Autopsy steps:
 - Found an interesting file: `fingerprint.jpg`.
 
 In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
+
 ![flag1]()
 <pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
 
@@ -97,7 +98,9 @@ Brute-forced with fcrackzip:
 <pre>fcrackzip -u -D -p dict.txt flag.zip</pre>
 - Successfully cracked the password: `for007`.
 - Extracted the zip file and found a PDF. Opened it to get Flag 2.
+
 ![passwd_crack]()
+
 ![flag2]()
 <pre>Flag 2: {4a3232c59ecda21ac71bebe3b329bf36}</pre>
 
@@ -107,8 +110,10 @@ Brute-forced with fcrackzip:
 - Explored deeper into the filesystem, found under Docker overlay:
 <pre>/var/lib/docker/overlay2/6f9fd3407d0ee6fe67cef2aa53951b66a6e3384e3b10afa791d1f02836da89c2/diff/var/ftp/pub/saboot.001</pre>
 - Extracted `saboot.001` from Autopsy.
-- Added it as a new data source in Autopsy. There found `flag3.txt` which contained Flag 3.
+- Added it as a new data source in Autopsy. There, found `flag3.txt` which contained Flag 3.
+
 ![finding_saboot]()
+
 ![flag3]()
 <pre>Flag 3: {8442460f48338fe60a9497b8e0e9022f}</pre>
 
@@ -117,6 +122,7 @@ Brute-forced with fcrackzip:
 ## STEP 7: FINDING FLAG 4
 - Finally, in the root directory `/` found a file named `root.txt`.
 - Opened it to reveal Flag 4.
+
 ![flag4]()
 <pre>Flag 4: {9440aee508b6215995219c58c8ba4b45}</pre>
 
