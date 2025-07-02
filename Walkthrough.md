@@ -46,7 +46,7 @@ FTK Imager was used to load and extract the contents of the OVA file:
   - A `.ovf` descriptor
   - A `.mf` manifest file
 
-![ftk_imager]()
+![ftk_imager](images/ftk_imager.png)
 
 ---
 
@@ -58,7 +58,7 @@ Autopsy steps:
 - Add data source → choose the `.vmdk` disk.
 - Let Autopsy parse the filesystem.
 
-![autopsy]()
+![autopsy](images/autopsy.png)
 
 ---
 
@@ -68,7 +68,7 @@ Autopsy steps:
 
 In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
 
-![flag1]()
+![flag1](images/flag1)
 <pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
 
 ---
@@ -86,7 +86,7 @@ Used an online PGP decryption tool, the decrypted message said:
 > In case the forensic investigator forgets his password, this hint can help him, where the password is of 6 characters long.
 > Starting 3 characters is the word "for" and the ending 3 characters are numeric.
 
-![clue]()
+![clue](images/clue.png)
 
 ---
 
@@ -101,7 +101,7 @@ Brute-forced with fcrackzip:
 
 ![passwd_crack]()
 
-![flag2]()
+![flag2](images/flag2.png)
 <pre>Flag 2: {4a3232c59ecda21ac71bebe3b329bf36}</pre>
 
 ---
@@ -112,9 +112,9 @@ Brute-forced with fcrackzip:
 - Extracted `saboot.001` from Autopsy.
 - Added it as a new data source in Autopsy. There, found `flag3.txt` which contained Flag 3.
 
-![finding_saboot]()
+![finding_saboot](images/finding_saboot.png)
 
-![flag3]()
+![flag3](images/flag3.png)
 <pre>Flag 3: {8442460f48338fe60a9497b8e0e9022f}</pre>
 
 ---
@@ -123,7 +123,7 @@ Brute-forced with fcrackzip:
 - Finally, in the root directory `/` found a file named `root.txt`.
 - Opened it to reveal Flag 4.
 
-![flag4]()
+![flag4](images/flag.png)
 <pre>Flag 4: {9440aee508b6215995219c58c8ba4b45}</pre>
 
 ---
