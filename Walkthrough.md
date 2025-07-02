@@ -1,4 +1,4 @@
-# HA: FORENSICS - Vulnhub WALKTHROUGH
+# HA: FORENSICS - VulnHub WALKTHROUGH
 
 ---
 
