@@ -1,4 +1,4 @@
-# HA FORENSICS
+# HA FORENSICS - WALKTHROUGH
 
 ---
 
@@ -138,5 +138,7 @@ Summary of the flags found:
 | **Flag 2** | Inside password-protected `flag.zip` (password `for007`) from `/var/www/html` |
 | **Flag 3** | In `flag3.txt` inside `saboot.001` from Docker overlay FTP pub                |
 | **Flag 4** | In `root.txt` in the root directory `/`                                       |
+
+---
 
 > This completes the forensics analysis on HA Forensics from VulnHub.
