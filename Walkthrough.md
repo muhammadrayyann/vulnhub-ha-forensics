@@ -1,4 +1,4 @@
-# HA FORENSICS - WALKTHROUGH
+# HA: FORENSICS - WALKTHROUGH
 
 ---
 
@@ -94,12 +94,12 @@ Used an online PGP decryption tool, the decrypted message said:
 - In `/var/www/html`, found flag.zip.
 Generated a targeted wordlist using `crunch`:
 <pre>crunch 6 6 -t for%%% -o dict.txt</pre>
+
+![passwd_crack](snippets/passwd_crack)
+
 Brute-forced with fcrackzip:
 <pre>fcrackzip -u -D -p dict.txt flag.zip</pre>
 - Successfully cracked the password: `for007`.
-
-![passwd_crack]()
-
 - Extracted the zip file and found a PDF. Opened it to get Flag 2.
 
 ![flag2](snippets/flag2.png)
