@@ -69,7 +69,9 @@ Autopsy steps:
 In Autopsy, inspecting the metadata/text embedded in the image showed a hidden flag under the text section.
 
 ![flag1](snippets/flag1.png)
-<pre>Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}</pre>
+```
+Flag 1: {bc02d4ffbeeab9f57c5e03de1098ff31}
+```
 
 ---
 
@@ -93,17 +95,23 @@ Used an online PGP decryption tool, the decrypted message said:
 ## STEP 5: CRACKING THE PASSWORD & FINDING FLAG 2
 - In `/var/www/html`, found flag.zip.
 Generated a targeted wordlist using `crunch`:
-<pre>crunch 6 6 -t for%%% -o dict.txt</pre>
+```bash
+crunch 6 6 -t for%%% -o dict.txt
+```
 
 ![passwd_crack](snippets/passwd_crack.png)
 
 Brute-forced with fcrackzip:
-<pre>fcrackzip -u -D -p dict.txt flag.zip</pre>
+```bash
+fcrackzip -u -D -p dict.txt flag.zip
+```
 - Successfully cracked the password: `for007`.
 - Extracted the zip file and found a PDF. Opened it to get Flag 2.
 
 ![flag2](snippets/flag2.png)
-<pre>Flag 2: {4a3232c59ecda21ac71bebe3b329bf36}</pre>
+```
+Flag 2: {4a3232c59ecda21ac71bebe3b329bf36}
+```
 
 ---
 
@@ -117,7 +125,9 @@ Brute-forced with fcrackzip:
 - Added it as a new data source in Autopsy. There, found `flag3.txt` which contained Flag 3.
 
 ![flag3](snippets/flag3.png)
-<pre>Flag 3: {8442460f48338fe60a9497b8e0e9022f}</pre>
+```
+Flag 3: {8442460f48338fe60a9497b8e0e9022f}
+```
 
 ---
 
@@ -126,7 +136,9 @@ Brute-forced with fcrackzip:
 - Opened it to reveal Flag 4.
 
 ![flag4](snippets/flag4.png)
-<pre>Flag 4: {9440aee508b6215995219c58c8ba4b45}</pre>
+```
+Flag 4: {9440aee508b6215995219c58c8ba4b45}
+```
 
 ---
 
